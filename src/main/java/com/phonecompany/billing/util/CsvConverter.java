@@ -34,7 +34,7 @@ public final class CsvConverter {
                PhoneLog phoneLog = new PhoneLog();
                phoneLog.setPhone(data[0]);
                phoneLog.setTimeStart(parseDateTime(data[1]));
-               phoneLog.setTimeEnd(parseDateTime(data[1]));
+               phoneLog.setTimeEnd(parseDateTime(data[2]));
                phoneLogs.add(phoneLog);
            }
        }

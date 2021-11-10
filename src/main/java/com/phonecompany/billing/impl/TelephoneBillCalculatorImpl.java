@@ -47,7 +47,7 @@ public class TelephoneBillCalculatorImpl implements TelephoneBillCalculator{
 		while(!startTime.isAfter(endTime)) {
 			amount = amount.add(calculateByMinute(minuteCalled, endTime));
 			minuteCalled++;
-			startTime.plusMinutes(1).withSecond(0);
+			startTime = startTime.plusMinutes(1).withSecond(0);
 		}
 		return amount;
 	}
