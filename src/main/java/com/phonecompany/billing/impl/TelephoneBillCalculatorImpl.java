@@ -42,7 +42,7 @@ public class TelephoneBillCalculatorImpl implements TelephoneBillCalculator{
 		if(Objects.isNull(startTime) || Objects.isNull(endTime) || !startTime.isBefore(endTime)) {
 			return BigDecimal.ZERO;
 		}
-		int minuteCalled = 0;
+		int minuteCalled = 1;
 		BigDecimal amount = BigDecimal.ZERO;
 		while(!startTime.isAfter(endTime)) {
 			amount = amount.add(calculateByMinute(minuteCalled, endTime));
